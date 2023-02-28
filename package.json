@@ -12,6 +12,7 @@
 	"dependencies": {
 		"@astrojs/svelte": "^2.0.2",
 		"astro": "^2.0.15",
+		"prettier-plugin-astro": "^0.8.0",
 		"svelte": "^3.54.0"
 	}
 }

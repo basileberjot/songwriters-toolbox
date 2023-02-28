@@ -3,11 +3,13 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/svelte': ^2.0.2
   astro: ^2.0.15
+  prettier-plugin-astro: ^0.8.0
   svelte: ^3.54.0
 
 dependencies:
   '@astrojs/svelte': 2.0.2_astro@2.0.15+svelte@3.55.1
   astro: 2.0.15
+  prettier-plugin-astro: 0.8.0
   svelte: 3.55.1
 
 packages:
@@ -2275,6 +2277,16 @@ packages:
     engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
     dependencies:
       '@astrojs/compiler': 0.31.4
+      prettier: 2.8.4
+      sass-formatter: 0.7.6
+      synckit: 0.8.5
+    dev: false
+
+  /prettier-plugin-astro/0.8.0:
+    resolution: {integrity: sha512-kt9wk33J7HvFGwFaHb8piwy4zbUmabC8Nu+qCw493jhe96YkpjscqGBPy4nJ9TPy9pd7+kEx1zM81rp+MIdrXg==}
+    engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
+    dependencies:
+      '@astrojs/compiler': 1.1.2
       prettier: 2.8.4
       sass-formatter: 0.7.6
       synckit: 0.8.5
