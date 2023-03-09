@@ -1,0 +1,35 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const allGenres = await Astro.glob("../genres/*.md");
+
+  return [
+    { params: { tag: "astro" }, props: { genres: allGenres } },
+    { params: { tag: "successes" }, props: { genres: allGenres } },
+    { params: { tag: "community" }, props: { genres: allGenres } },
+    { params: { tag: "blogging" }, props: { genres: allGenres } },
+    { params: { tag: "setbacks" }, props: { genres: allGenres } },
+    { params: { tag: "learning in public" }, props: { genres: allGenres } },
+  ];
+}
+
+const { tag } = Astro.params;
+const { genres } = Astro.props;
+const filteredGenres = genres.filter((genre: any) =>
+  genre.frontmatter.tags.includes(tag)
+);
+---
+
+<Layout title={tag as string}>
+  <p>Genres tagged with {tag}</p>
+  <ul>
+    {
+      filteredGenres.map((genre: any) => (
+        <li>
+          <a href={genre.url}>{genre.frontmatter.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

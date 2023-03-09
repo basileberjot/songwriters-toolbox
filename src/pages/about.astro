@@ -1,18 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Genre from "../components/Genre.astro";
+const allGenres = await Astro.glob("../pages/genres/*.md");
+
+const pageTitle = "Inspire";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-
-    <h1><span class="text-gradient">Inspiration</span></h1>
+    <h1><span class="text-gradient">{pageTitle}</span></h1>
     <p class="instructions">
       To help music creators kickstart a project, broaden their knowledge on
       various styles of music, and catalyse inspiration.
     </p>
+    <ul>
+      {
+        allGenres.map((genre) => (
+          <Genre url={genre.url as string} title={genre.frontmatter.title} />
+        ))
+      }
+    </ul>
   </main>
 </Layout>
 
