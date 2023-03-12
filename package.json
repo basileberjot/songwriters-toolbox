@@ -1,18 +1,19 @@
 {
-	"name": "songwriters-toolbox",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"@astrojs/svelte": "^2.0.2",
-		"astro": "^2.0.15",
-		"prettier-plugin-astro": "^0.8.0",
-		"svelte": "^3.54.0"
-	}
+  "name": "songwriters-toolbox",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/svelte": "^2.0.2",
+    "astro": "^2.0.15",
+    "prettier-plugin-astro": "^0.8.0",
+    "prettier-plugin-svelte": "^2.9.0",
+    "svelte": "^3.54.0"
+  }
 }
