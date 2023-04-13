@@ -16,13 +16,19 @@
   let analysis;
 
   onMount(async function () {
-    const token = getToken();
-    console.log({ token });
+    // Check if access token is in the cookies
+    const cookies = document.cookie.split(";"); // Get all cookies as an array
+    const token =
+      cookies
+        .find((cookie) => cookie?.trim()?.startsWith("spotify_token"))
+        ?.split("=")[1] ?? "";
 
     if (token) {
       await getGenres(token).then((data) => (genres = data.genres));
       track = await getTrackTest(token);
       analysis = await getAnalysis(token);
+    } else {
+      getToken();
     }
     console.log({ genres, track, analysis });
   });

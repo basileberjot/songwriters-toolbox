@@ -6,12 +6,6 @@ export const getToken = async () => {
   const tokenUrl = "https://accounts.spotify.com/api/token";
   const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&scope=${scope}`;
 
-  // Check if access token is in the cookies
-  const cookies = document.cookie.split(";"); // Get all cookies as an array
-  const token = cookies
-    .find((cookie: any) => cookie.trim().startsWith("spotify_token"))!
-    .split("=")[1];
-
   // Check if authorization code is in URL params
   const params = new URLSearchParams(window.location.search);
   const authorizationCode = params.get("code");
@@ -48,6 +42,4 @@ export const getToken = async () => {
     // If we don't have an authorization code in the URL, redirect to the auth page
     location.href = authUrl;
   }
-
-  return token;
 };
