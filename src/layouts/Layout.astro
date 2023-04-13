@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
+
 export interface Props {
   title: string;
 }
@@ -15,6 +16,7 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="node_modules/svelte-material-ui/bare.css" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -24,7 +26,7 @@ const { title } = Astro.props;
     <Footer />
 
     <script>
-      import "../scripts/menu.js";
+      import "../utils/menu.js";
     </script>
   </body>
 </html>

@@ -7,10 +7,10 @@ import GenreSelect from "../components/GenreSelect.svelte";
 const messages = ["Hello", "Hi", "Hey", "Welcome", "Greetings", "Salutations"];
 ---
 
-<Layout title="Songwriter's toolbox.">
+<Layout title="Songwriter's toolbox">
   <main>
     <h1>Welcome to <span class="text-gradient">Songwriter's Toolbox</span></h1>
-    <GenreSelect client:load />
+    <GenreSelect client:only />
   </main>
 </Layout>
 

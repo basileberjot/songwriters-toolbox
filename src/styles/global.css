@@ -89,3 +89,7 @@ html.dark {
 .dark .nav-links a {
   color: #fff;
 }
+
+.genre-select {
+  background: white;
+}

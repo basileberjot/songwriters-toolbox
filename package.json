@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "@astrojs/svelte": "^2.0.2",
+    "@smui-extra/autocomplete": "7.0.0-beta.0",
     "astro": "^2.0.15",
+    "midi-writer-js": "^2.1.4",
     "prettier-plugin-astro": "^0.8.0",
     "prettier-plugin-svelte": "^2.9.0",
-    "svelte": "^3.54.0"
+    "svelte": "^3.54.0",
+    "svelte-material-ui": "7.0.0-beta.0"
   }
 }
